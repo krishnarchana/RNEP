@@ -1,0 +1,110 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+input[type=text] {
+    width: 16%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 8%;
+    background-color: #2A2DD4;
+    color: white;
+    padding: 10px 14px;
+    margin: 16px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius:25px;
+}
+
+input[type=submit]:hover {
+   background-color: #45a049;
+}
+
+.loginForm {
+    margin-top:5%;
+}
+.formLabel {
+    align-items: center; 
+    padding-right:11%;
+}
+.formParagraph {
+    float:left;
+    margin-left:5%;
+}
+.formHr {
+    width:90%;
+}
+.accordion {
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 90%;
+    border: 0.1px solid lightgrey;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    margin-bottom: 0;
+    margin-top:4px;
+}
+.active, .accordion:hover {
+    background-color: #ccc;
+ }
+.accordion:after {
+    content: '\02C5';
+    color: #777;
+    font-weight: bold;
+    float: left;
+    margin-left: 5px;
+    padding-right: 20px;
+}
+.active:after {
+    content: "\005E";
+}
+.panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border:0.1px solid lightgrey;
+    margin-left:5%;
+    width:90%;
+}
+
+@media (max-width: 600px) {
+    input[type=text] {
+        width: 90%;
+    }
+
+    .formLabel {
+        align-items: center;
+        padding-left: 5%;
+        float: left;
+    }
+
+    input[type=submit] {
+        width: 80%;
+    }
+
+}
+
