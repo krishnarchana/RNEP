@@ -23,7 +23,7 @@ function App() {
         <header className="App-header">       
             <p>PTO Preference Portal</p>
         </header>
-        <form action="" className="loginForm">
+        <form action="/guideLinesOne" className="loginForm">
             <label className="formLabel" htmlFor="userLogin">User Login</label>
             <br/>
             <input type="text" id="userLoginId" name="userLogin" placeholder="LANID" />

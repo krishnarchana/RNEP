@@ -91,8 +91,170 @@ input[type=submit]:hover {
     width:90%;
 }
 
+#outer {
+    background: #fff;
+    text-align: center;
+    font-size:12px;
+    padding-right:20px;
+    padding-left:20px;
+}
+
+.leftBar {
+    display: inline-block;
+    height: 33rem;
+    width: 25%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5%;
+    float: left;
+    background: #282c34;
+    color: #fff;
+    line-height:30rem;
+    font-weight:bold;
+    font-size: 20px;
+}
+
+.leftBar p {
+   vertical-align: middle;
+ }
+
+.rightBar {
+    display: inline-block;
+    height: 33rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5%;
+    width: 55%;
+    background: #fff;
+    float: left;
+}
+
+.guideLinesPOne {
+    float:left;
+    font-weight:bold;
+}
+
+.guideLinesPTwo {
+    float: right;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.guideLinesText p {
+    margin-top:0;
+    padding-top:0;
+}
+
+.guideLinesText {
+    margin-bottom: 3rem;
+}
+
+.hrClass {
+    display: none;
+}
+.continueBtn {
+    width: 100%;
+    background-color: #282c34;
+    color: white;
+    padding: 10px 14px;
+    margin: 16px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.footerDiv {
+    height: 3rem;
+    background: #282c34;
+    padding-top: 1rem;
+}
+
+.footerAnchor {
+    background: #282c34;
+    color: #fff;
+    display: block;
+    border: 0.5px solid #fff;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    height: 1rem;
+    width: 50%;
+    margin: auto;
+    border-radius: 32px;
+}
+.fullscreenTitle {
+    display: block;
+    float:left;
+}
+.mobilescreenTitle{
+    display:none;
+}
+.usernameTitle{
+    display:none;
+}
+.logoutClass {
+    height: 1.3rem;
+    background: #282c34;
+    padding-top: 6px;
+    padding-left: 2rem;
+    width: 1.2rem;
+    border-radius: 18px;
+    float:right;
+    border: 0.5px solid #fff;
+    margin-left:28rem;
+    margin-top:1.2rem;
+}
+
+i {
+    display: block;
+    color: #fff;
+    text-align: center;
+    cursor:pointer;
+}
+.gg-log-out {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 10px;
+    height: 16px;
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    border-left: 0;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    margin-left: -10px
+}
+.gg-log-out::after,
+.gg-log-out::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
+}
+
+.gg-log-out::after {
+    border-top: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(-45deg);
+    width: 8px;
+    height: 8px;
+    right: 8px;
+    bottom: 2px;
+}
+
+.gg-log-out::before {
+    border-radius: 3px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+    left: -5px;
+    bottom: 5px
+} 
+
+
 @media (max-width: 600px) {
-    input[type=text] {
+    input [type=text] {
         width: 90%;
     }
 
@@ -106,5 +268,53 @@ input[type=submit]:hover {
         width: 80%;
     }
 
-}
+    .leftBar {
+        display: none;
+    }
 
+    .rightBar {
+        width: 100%;
+        margin-top: 6%;
+    }
+
+    .hrClass {
+        display: block;
+    }
+
+    .continueBtn {
+        width: 96%;
+        margin-right: 1.5rem;
+    }
+
+    .footerDiv {
+        margin-right: 1rem;
+    }
+
+    .footerAnchor {
+        width:70%;
+        font-size:10px;
+    }
+    .fullscreenTitle {
+        display: none;
+    }
+
+    .mobilescreenTitle {
+        display: block;
+        width:80%;
+        margin-left:0;
+    }
+    .usernameTitle {
+        display: block;
+        font-weight:bold;
+        font-size:22px;
+    }
+    .App-header {
+        width:100%;
+    }
+    .titleDiv {
+        width:100%;
+    }
+    .logoutClass {
+        float:right;
+    }
+    }
