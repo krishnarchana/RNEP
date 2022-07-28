@@ -4,11 +4,16 @@ import { useNavigate } from "react-router-dom";
 
 function GuidelinesOne() {
     const navigate = useNavigate();
+    const [guideLinesStateFlag, setGuideLinesStateFlag] = useState(true);
+    const [videoFlag, setVideoFlag] = useState(false);
     const changePageTwo = (e) => {
-
+        setGuideLinesStateFlag(false);
     }
     const logoutHandler = () => {
         navigate("/");
+    }
+    const playVideoHandler = () => {
+        setVideoFlag(true);
     }
 
     return (
@@ -29,11 +34,11 @@ function GuidelinesOne() {
                 </div>
                 <div className="rightBar">
                     <div className="guideLinesText">                        
-                        <p className="guideLinesPOne">Important Round and Phase Guidelines</p>
-                        <p className="guideLinesPTwo">1 of 2</p>
+                        {guideLinesStateFlag ? (<p className="guideLinesPOne">Important Round and Phase Guidelines</p>) : (<p className="guideLinesPOne">PTO Tutorial</p>)}
+                        {guideLinesStateFlag ? (<p className="guideLinesPTwo">1 of 2</p>) : (<p className="guideLinesPTwo">2 of 2</p>)}
                     </div>
                     <hr className="hrClass"/>
-                    <div>
+                    {guideLinesStateFlag ? (<div> <div>
                         <span style={{ float: 'left', fontWeight:'bold' }}>Round 1 - Phase 1</span>
                         <br/>
                         <ul>
@@ -67,7 +72,30 @@ function GuidelinesOne() {
                             <li style={{ textAlign: 'left' }}>Employees may select all of their remaining PTO allowance.</li>
                         </ul>
                     </div>
-                    <button className="continueBtn" onClick={(e) => changePageTwo(e)}>Continue</button>
+                        </div>
+                    ) : <div>
+                            <div style={{
+                                width: '100%', height: "15rem", border: '1px solid lightgrey'
+                            }}>
+                                {!videoFlag ? <div style={{ marginTop: '6rem' }}>
+                                    <span>View Tutorial Video</span>
+                                    <br />
+                                    <br />
+                                    <span className="gg-play-button-r" onClick={playVideoHandler}></span>
+                                   
+                                </div>
+                                    : (<video controls>
+                                        <source src="./assets/sampleVideo.mp4" type="video/mp4" />
+                                        <source src="./assets/sampleVideo.ogg" type="video/ogg" />
+                                        Your browser does not support the video tag.
+                                    </video>) }
+                                </div>
+                    </div>}
+                    {!guideLinesStateFlag ? <div className="sampleImageDiv">
+                        <img src='./assets/sampleImage.jpg' />
+                    </div> : null}
+                    {guideLinesStateFlag ? <button className="continueBtn" onClick={(e) => changePageTwo(e)}>Continue</button> : null}
+                   <br/>
                     <div className="footerDiv">
                         <a className="footerAnchor" href="mailto:abc@example.com?subject = Feedback&body = Message">Email Your Manager For Additional Questions</a>
                     </div>
