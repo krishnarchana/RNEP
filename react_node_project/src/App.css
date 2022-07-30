@@ -1,16 +1,16 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-header {
-  background-color: #282c34;
-  height: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 input[type=text] {
@@ -32,27 +32,31 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    border-radius:25px;
+    border-radius: 25px;
 }
 
 input[type=submit]:hover {
-   background-color: #45a049;
+    background-color: #45a049;
 }
 
 .loginForm {
-    margin-top:5%;
+    margin-top: 5%;
 }
+
 .formLabel {
-    align-items: center; 
-    padding-right:11%;
+    align-items: center;
+    padding-right: 11%;
 }
+
 .formParagraph {
-    float:left;
-    margin-left:5%;
+    float: left;
+    margin-left: 5%;
 }
+
 .formHr {
-    width:90%;
+    width: 90%;
 }
+
 .accordion {
     background-color: #fff;
     color: #444;
@@ -65,11 +69,13 @@ input[type=submit]:hover {
     font-size: 15px;
     transition: 0.4s;
     margin-bottom: 0;
-    margin-top:4px;
+    margin-top: 4px;
 }
+
 .active, .accordion:hover {
     background-color: #ccc;
- }
+}
+
 .accordion:after {
     content: '\02C5';
     color: #777;
@@ -78,25 +84,27 @@ input[type=submit]:hover {
     margin-left: 5px;
     padding-right: 20px;
 }
+
 .active:after {
     content: "\005E";
 }
+
 .panel {
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    border:0.1px solid lightgrey;
-    margin-left:5%;
-    width:90%;
+    border: 0.1px solid lightgrey;
+    margin-left: 5%;
+    width: 90%;
 }
 
 #outer {
     background: #fff;
     text-align: center;
-    font-size:12px;
-    padding-right:20px;
-    padding-left:20px;
+    font-size: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .leftBar {
@@ -109,14 +117,14 @@ input[type=submit]:hover {
     float: left;
     background: #282c34;
     color: #fff;
-    line-height:30rem;
-    font-weight:bold;
+    line-height: 30rem;
+    font-weight: bold;
     font-size: 20px;
 }
 
-.leftBar p {
-   vertical-align: middle;
- }
+ .leftBar p {
+    vertical-align: middle;
+}
 
 .rightBar {
     display: inline-block;
@@ -130,8 +138,8 @@ input[type=submit]:hover {
 }
 
 .guideLinesPOne {
-    float:left;
-    font-weight:bold;
+    float: left;
+    font-weight: bold;
 }
 
 .guideLinesPTwo {
@@ -141,8 +149,8 @@ input[type=submit]:hover {
 }
 
 .guideLinesText p {
-    margin-top:0;
-    padding-top:0;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .guideLinesText {
@@ -152,6 +160,7 @@ input[type=submit]:hover {
 .hrClass {
     display: none;
 }
+
 .continueBtn {
     width: 100%;
     background-color: #282c34;
@@ -168,6 +177,7 @@ input[type=submit]:hover {
     height: 3rem;
     background: #282c34;
     padding-top: 1rem;
+    display: none;
 }
 
 .footerAnchor {
@@ -183,16 +193,20 @@ input[type=submit]:hover {
     margin: auto;
     border-radius: 32px;
 }
+
 .fullscreenTitle {
     display: block;
-    float:left;
+    float: left;
 }
-.mobilescreenTitle{
-    display:none;
+
+.mobilescreenTitle {
+    display: none;
 }
-.usernameTitle{
-    display:none;
+
+.usernameTitle {
+    display: none;
 }
+
 .logoutClass {
     height: 1.3rem;
     background: #282c34;
@@ -200,18 +214,19 @@ input[type=submit]:hover {
     padding-left: 2rem;
     width: 1.2rem;
     border-radius: 18px;
-    float:right;
+    float: right;
     border: 0.5px solid #fff;
-    margin-left:28rem;
-    margin-top:1.2rem;
+    margin-left: 28rem;
+    margin-top: 1.2rem;
 }
 
 i {
     display: block;
     color: #fff;
     text-align: center;
-    cursor:pointer;
+    cursor: pointer;
 }
+
 .gg-log-out {
     box-sizing: border-box;
     position: relative;
@@ -225,13 +240,13 @@ i {
     border-bottom-left-radius: 2px;
     margin-left: -10px
 }
-.gg-log-out::after,
-.gg-log-out::before {
+
+.gg-log-out::after, .gg-log-out::before {
     content: "";
     display: block;
     box-sizing: border-box;
     position: absolute
-}
+ }
 
 .gg-log-out::after {
     border-top: 2px solid;
@@ -241,7 +256,7 @@ i {
     height: 8px;
     right: 8px;
     bottom: 2px;
-}
+ }
 
 .gg-log-out::before {
     border-radius: 3px;
@@ -251,6 +266,7 @@ i {
     left: -5px;
     bottom: 5px
 }
+
 .gg-play-button-r {
     box-sizing: border-box;
     position: relative;
@@ -261,8 +277,8 @@ i {
     border: 2px solid;
     border-radius: 4px;
     z-index: 3;
-    margin:auto;
-    cursor:pointer;
+    margin: auto;
+    cursor: pointer;
 }
 
 video {
@@ -275,27 +291,55 @@ video {
     height: 5rem;
 }
 
-    .sampleImageDiv img {
-        width:100%;
-        height:6rem;
-    }
+.sampleImageDiv img {
+    width: 100%;
+    height: 6rem;
+ }
 
-    .gg-play-button-r::before {
-        content: "";
-        display: block;
-        box-sizing: border-box;
-        position: absolute;
-        width: 0;
-        height: 10px;
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        border-left: 6px solid;
-        top: 4px;
-        left: 7px;
-        z-index: 3;
-    } 
+.gg-play-button-r::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 0;
+    height: 10px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid;
+    top: 4px;
+    left: 7px;
+    z-index: 3;
+}
 
-@media (max-width: 600px) {
+.liText {
+    text-align: justify;
+}
+
+.spanText {
+    font-weight: bold;
+    float: left;
+}
+
+.videoMainDiv {
+    width: 100%;
+    height: 15rem;
+    border: 1px solid lightgrey;
+}
+
+.rightHeaderCss {
+    float: right;
+    margin-top: -40px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.leftHeaderCss {
+    float: left;
+    width: 100%;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 600px) and (min-width:300px) {
     input [type=text] {
         width: 90%;
     }
@@ -323,6 +367,23 @@ video {
         display: block;
     }
 
+    .rightHeaderCss {
+        float: right;
+        margin-top: -40px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+
+    .leftHeaderCss {
+        float: left;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .liText {
+        padding-right: 20px;
+    }
+
     .continueBtn {
         width: 96%;
         margin-right: 1.5rem;
@@ -330,33 +391,64 @@ video {
 
     .footerDiv {
         margin-right: 1rem;
+        display: block;
     }
 
     .footerAnchor {
-        width:70%;
-        font-size:10px;
+        width: 70%;
+        font-size: 10px;
     }
+
     .fullscreenTitle {
         display: none;
     }
 
     .mobilescreenTitle {
         display: block;
-        width:80%;
-        margin-left:0;
+        width: 80%;
+        margin-left: 0;
     }
+
     .usernameTitle {
         display: block;
-        font-weight:bold;
-        font-size:22px;
+        font-weight: bold;
+        font-size: 22px;
     }
+
     .App-header {
-        width:100%;
+        width: 100%;
     }
+
     .titleDiv {
-        width:100%;
+        width: 100%;
     }
+
+    .guideLinesPTwo {
+        margin-right: 20px;
+    }
+
     .logoutClass {
-        float:right;
+        float: right;
     }
+
+    .sampleImageDiv {
+        margin-left: 0;
+        width: 96%;
     }
+
+    .videoMainDiv {
+        width: 96%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    input[type=text] {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    input[type=text] {
+        width: 90%;
+    }
+}
