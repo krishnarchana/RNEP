@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import GuidelinesOne from './GuidelinesOne';
+import Dashboard from './dashboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,7 +13,8 @@ root.render(
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<App />} />
-                <Route path="/guideLinesOne" element={<GuidelinesOne /> } />
+                <Route path="/guideLinesOne" element={<GuidelinesOne />} />
+                <Route path="/dashboard" element={<Dashboard />} />
             </Routes>
         </BrowserRouter>
   </React.StrictMode>

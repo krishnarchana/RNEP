@@ -35,9 +35,9 @@ input[type=submit] {
     border-radius: 25px;
 }
 
-input[type=submit]:hover {
-    background-color: #45a049;
-}
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
 
 .loginForm {
     margin-top: 5%;
@@ -57,6 +57,10 @@ input[type=submit]:hover {
     width: 90%;
 }
 
+.mdView{
+    display:block;
+}
+
 .accordion {
     background-color: #fff;
     color: #444;
@@ -72,18 +76,18 @@ input[type=submit]:hover {
     margin-top: 4px;
 }
 
-.active, .accordion:hover {
-    background-color: #ccc;
-}
+    .active, .accordion:hover {
+        background-color: #ccc;
+    }
 
-.accordion:after {
-    content: '\02C5';
-    color: #777;
-    font-weight: bold;
-    float: left;
-    margin-left: 5px;
-    padding-right: 20px;
-}
+    .accordion:after {
+        content: '\02C5';
+        color: #777;
+        font-weight: bold;
+        float: left;
+        margin-left: 5px;
+        padding-right: 20px;
+    }
 
 .active:after {
     content: "\005E";
@@ -122,9 +126,9 @@ input[type=submit]:hover {
     font-size: 20px;
 }
 
- .leftBar p {
-    vertical-align: middle;
-}
+    .leftBar p {
+        vertical-align: middle;
+    }
 
 .rightBar {
     display: inline-block;
@@ -137,6 +141,47 @@ input[type=submit]:hover {
     float: left;
 }
 
+.refCss{
+    width:35%;
+    height:21rem;
+    background-color:#fff;
+    z-index:1000000 !important;
+    position: fixed;
+   margin-left:50rem;
+   border : 1px solid lightgrey;
+}
+.reportCss {
+    width: 25%;
+    height: 10rem;
+    background-color: #fff;
+    z-index: 1000000 !important;
+    position: fixed;
+    margin-left: 50rem;
+    border: 1px solid lightgrey;
+}
+
+.refPcss {
+    font-weight: bold;
+    float: left;
+    padding-left: 20px;
+}
+
+.refp{
+    height:24px;
+    font-weight:bold;
+}
+
+.refDiv{
+    width:100%;
+}
+
+.
+
+.refImg{
+    width:16px;
+    height:16px;
+    float:right;
+}
 .guideLinesPOne {
     float: left;
     font-weight: bold;
@@ -173,17 +218,22 @@ input[type=submit]:hover {
     border-radius: 25px;
 }
 
-.footerDiv {
-    height: 3rem;
-    background: #282c34;
-    padding-top: 1rem;
+.footerDivMobile {
     display: none;
 }
 
-.footerAnchor {
+.footerDivDesktop {
+    display: block;
+    height: 1rem;
+    background: #282c34;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.footerAnchorMobile {
     background: #282c34;
     color: #fff;
-    display: block;
+    display: none;
     border: 0.5px solid #fff;
     padding: 8px 10px;
     text-align: center;
@@ -192,6 +242,29 @@ input[type=submit]:hover {
     width: 50%;
     margin: auto;
     border-radius: 32px;
+}
+
+.footerAnchorDesktop {
+    background: #282c34;
+    color: #fff;
+    display: block;
+    border: 0.5px solid #fff;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    height: 1rem;
+    width: 20%;
+    margin: auto;
+    float: right;
+    margin-right: 7rem;
+    border-radius: 32px;
+}
+
+.footerDivSpan {
+    display: block;
+    margin-left: 10rem;
+    float: left;
+    color: #fff;
 }
 
 .fullscreenTitle {
@@ -241,31 +314,31 @@ i {
     margin-left: -10px
 }
 
-.gg-log-out::after, .gg-log-out::before {
-    content: "";
-    display: block;
-    box-sizing: border-box;
-    position: absolute
- }
+    .gg-log-out::after, .gg-log-out::before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute
+    }
 
-.gg-log-out::after {
-    border-top: 2px solid;
-    border-left: 2px solid;
-    transform: rotate(-45deg);
-    width: 8px;
-    height: 8px;
-    right: 8px;
-    bottom: 2px;
- }
+    .gg-log-out::after {
+        border-top: 2px solid;
+        border-left: 2px solid;
+        transform: rotate(-45deg);
+        width: 8px;
+        height: 8px;
+        right: 8px;
+        bottom: 2px;
+    }
 
-.gg-log-out::before {
-    border-radius: 3px;
-    width: 10px;
-    height: 2px;
-    background: currentColor;
-    left: -5px;
-    bottom: 5px
-}
+    .gg-log-out::before {
+        border-radius: 3px;
+        width: 10px;
+        height: 2px;
+        background: currentColor;
+        left: -5px;
+        bottom: 5px
+    }
 
 .gg-play-button-r {
     box-sizing: border-box;
@@ -291,10 +364,10 @@ video {
     height: 5rem;
 }
 
-.sampleImageDiv img {
-    width: 100%;
-    height: 6rem;
- }
+    .sampleImageDiv img {
+        width: 100%;
+        height: 6rem;
+    }
 
 .gg-play-button-r::before {
     content: "";
@@ -339,9 +412,35 @@ video {
     padding-top: 20px;
 }
 
+.mobileDashboardView {
+    display:none;
+}
+
+.optionsCss{
+    z-index:99;
+}
+
+.podCss {
+    z-index: 10000000 !important;
+    position:fixed;
+}
+
+#box p:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 600px) and (min-width:300px) {
     input [type=text] {
         width: 90%;
+    }
+
+    .mobileDashboardView {
+        display: block;
+    }
+
+    .mdView {
+        display: none;
     }
 
     .formLabel {
@@ -389,14 +488,27 @@ video {
         margin-right: 1.5rem;
     }
 
-    .footerDiv {
+    .footerDivMobile {
+        height: 3rem;
+        background: #282c34;
+        padding-top: 1rem;
+        display: none;
         margin-right: 1rem;
         display: block;
     }
 
-    .footerAnchor {
+    .footerDivDesktop {
+        display: none;
+    }
+
+    .footerAnchorMobile {
         width: 70%;
         font-size: 10px;
+        display: block;
+    }
+
+    .footerAnchorDesktop {
+        display: none;
     }
 
     .fullscreenTitle {
@@ -452,3 +564,163 @@ video {
         width: 90%;
     }
 }
+
+
+.manageBtn {
+    width: 10rem;
+    height: 1.6rem;
+    border: 1px solid lightgrey;
+    background-color: #fff;
+    color: blue;
+    padding-top: 10px;
+    float: left;
+    margin-left: 2rem;
+    cursor:pointer;
+}
+
+.reportBtn, .saveBtn{
+    height: 1.6rem;
+    border: 1px solid lightgrey;
+    background-color: dodgerblue;
+    color: white;
+    padding-top: 10px;
+    float: left;    
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.closeBtn {
+    height: 1.4rem;
+    border: 1px solid lightgrey;
+    background-color: dodgerblue;
+    color: white;
+    padding-top: 7px;
+    float: left;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 4rem;
+    text-align:center;
+    margin-right: 2.8rem;
+}
+
+.downloadRptBtn {
+    height: 1.4rem;
+    border: 1px solid lightgrey;
+    background-color: dodgerblue;
+    color: white;
+    padding-top: 7px;
+    float: left;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 7rem;
+    text-align: center;
+    margin-right: 2rem;
+}
+
+.cancelBtn {
+    height: 1.4rem;
+    border: 1px solid grey;
+    background-color: white;
+    color: dodgerblue;
+    padding-top: 7px;
+    float: right;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 5rem;
+    text-align: center;
+    margin-left: 8rem;
+}
+
+.reportBtn {
+    width: 10rem;
+    margin-left: 2rem;
+}
+
+.saveBtn {
+    width: 90%;
+    margin-top: 1rem;
+    margin-left: 0.7rem;
+}
+
+.divClass {
+    color: #555;
+    display: flex;
+    padding: 2px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    width: 43%;
+    float: left;
+    margin-left:2rem;
+    background-color:#fff;
+}
+
+input[type="search"] {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 7px 8px;
+    font-size: 14px;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    width:100%;
+}
+
+    input[type="search"]::placeholder {
+        color: #bbb;
+    }
+
+.button {
+    text-indent: -999px;
+    overflow: hidden;
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+    button:hover {
+        opacity: 1;
+    }
+
+    button:focus,
+    input[type="search"]:focus {
+        box-shadow: 0 0 3px 0 #1183d6;
+        border-color: #1183d6;
+        outline: none;
+    }
+
+.navPCss {
+    text-align:left;
+    padding-left:14px;
+    margin-bottom:5px;
+}
+
+.navDDCss {
+    width:90%;
+    height:2rem;
+}
+
+.groupDDCss {
+    width: 30%;
+    height: 13rem;
+    border: 1px solid black;
+    background-color: #fff;
+    z-index: 10000000 !important;
+    position: fixed;
+    margin-left: 14rem;
+}
+
+.groupDDCss li:hover {
+    background-color: lightgrey;
+    cursor:pointer;
+}
+
+
+    select > option {
+        height: 50px;
+    }

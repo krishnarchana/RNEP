@@ -5,16 +5,21 @@ import { useNavigate } from "react-router-dom";
 function GuidelinesOne() {
     const navigate = useNavigate();
     const [guideLinesStateFlag, setGuideLinesStateFlag] = useState(true);
+    const [dashboardFlag, setDashboardFlag] = useState(false);
     const [videoFlag, setVideoFlag] = useState(false);
 
     const changePageTwo = (e) => {
         setGuideLinesStateFlag(false);
+        setDashboardFlag(true);
     }
     const logoutHandler = () => {
         navigate("/");
     }
     const playVideoHandler = () => {
         setVideoFlag(true);
+    }
+    const changePageDashboard = () => {
+        navigate("/dashboard");
     }
 
     return (
@@ -100,10 +105,15 @@ function GuidelinesOne() {
                         <img src='./assets/sampleImage.jpg' />
                     </div> : null}
                     {guideLinesStateFlag ? <button className="continueBtn" onClick={(e) => changePageTwo(e)}>Continue</button> : null}
+                    {dashboardFlag ? <button className="continueBtn" onClick={(e) => changePageDashboard(e)}>Continue</button> : null}
                     <br />
                     <br />
-                    <div className="footerDiv">
-                        <a className="footerAnchor" href="mailto:abc@example.com?subject = Feedback&body = Message">Email Your Manager For Additional Questions</a>
+                    <div className="footerDivMobile">
+                        <a className="footerAnchorMobile" href="mailto:abc@example.com?subject = Feedback&body = Message">Email Your Manager For Additional Questions</a>
+                    </div>
+                    <div className="footerDivDesktop">
+                        <span className="footerDivSpan">If you have additional questions please contact your manager</span>
+                        <a className="footerAnchorDesktop" href="mailto:abc@example.com?subject = Feedback&body = Message">Email Your Manager</a>
                     </div>
                 </div>
             </div>
