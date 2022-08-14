@@ -72,7 +72,7 @@ function NavBar(props) {
                 <div className="groupDDCss">
                 {GroupData.map((item, index) => {
                     return (
-                        <li style={{paddingLeft:'10px', height: '30px', listStyle: 'none', textAlign: 'left' }} onClick={(e) => { selectedGroup(e) }}>
+                        <li className="liClass" onClick={(e) => { selectedGroup(e) }}>
                             {item.name}
                         </li>
                     )
