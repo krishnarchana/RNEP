@@ -57,7 +57,7 @@ function NavBar(props) {
     }
     return (
         <div>
-            <div className="mdView" style={{ width: '100%', height: '2.7rem', backgroundColor: '#F9F9F9', paddingTop: '5px' }}>
+            <div className="mdView" style={{ width: '100%', height: '3.2rem', backgroundColor: '#F9F9F9', paddingTop: '5px' }}>
                 <div className="manageBtn" onClick={(e) => { showManageScreen(e) }}>Manage Group Settings</div>
                 <div className="manageBtn" onClick={(e) => { showGroupsScreen(e) }}>All Groups<img src={expandIcon} style={{width:'16px', height:'16px', float:'right', paddingRight:'8px'} }/></div>
             <div className="divClass">

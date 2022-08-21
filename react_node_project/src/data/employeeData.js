@@ -7,7 +7,10 @@ let data = [
         groupName: 'NB LLC P1 - P3',
         hoursAvailable: '200',
         totalHours: '208',
-        status: '23:58'
+        status: '23:58',
+        employmentType: 'Full Time',
+        managerName: 'Manager Name1',
+        managerEmail: 'kimleukert@northwesternmutual.com'
     },
     {
         isChecked: false,
@@ -17,7 +20,10 @@ let data = [
         groupName: 'NB LLC P1 - P3',
         hoursAvailable: '208',
         totalHours: '208',
-        status: 'Disabled'
+        status: 'Disabled',
+        employmentType: 'Full Time',
+        managerName: 'Manager Name2',
+        managerEmail: 'kimleukert@northwesternmutual.com'
     },
     {
         isChecked: false,
@@ -27,7 +33,10 @@ let data = [
         groupName: 'NB LLC P1 - P3',
         hoursAvailable: '208',
         totalHours: '208',
-        status: 'Disabled'
+        status: 'Disabled',
+        employmentType: 'Full Time',
+        managerName: 'Manager Name3',
+        managerEmail: 'kimleukert@northwesternmutual.com'
     },
     {
         isChecked: false,
@@ -37,7 +46,10 @@ let data = [
         groupName: 'NB LLC P1 - P3',
         hoursAvailable: '208',
         totalHours: '208',
-        status: 'Disabled'
+        status: 'Disabled',
+        employmentType: 'Part Time',
+        managerName: 'Manager Name4',
+        managerEmail: 'kimleukert@northwesternmutual.com'
     },
     {
         isChecked: false,
@@ -47,7 +59,10 @@ let data = [
         groupName: 'NB LLC P1 - P3',
         hoursAvailable: '208',
         totalHours: '208',
-        status: 'Disabled'
+        status: 'Disabled',
+        employmentType: 'Part Time',
+        managerName: 'Manager Name5',
+        managerEmail: 'kimleukert@northwesternmutual.com'
     }
 ]
 

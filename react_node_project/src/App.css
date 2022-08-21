@@ -138,6 +138,7 @@ input[type=submit] {
     border: 0.1px solid lightgrey;
     margin-left: 1.5%;
     width: 97%;
+    height:55rem;
 }
 
 #outer {
@@ -767,4 +768,50 @@ input[type="search"] {
     height: 30px;
     list-style: none;
     text-align: left;
+}
+
+.tableClass{
+    width:100%;
+}
+
+.theadClass {
+    background-color: #F8F9FC;
+    height:2rem;
+}
+
+.theadClass tr th {
+    border-bottom: 1px solid lightgrey;
+}
+
+.calendarClass {
+    width:99%;
+    height:3rem;
+}
+
+.tbodyClass tr td {
+    font-weight:bold;
+}
+
+.theadp1{
+    margin-right:3.2rem;
+}
+
+.theadp2 {
+    margin-right: 12rem;
+}
+
+.theadp3 {
+    margin-right: 9rem;
+}
+
+.tbodyp1 {
+    margin-right: 6.6rem;
+}
+
+.tbodyp2 {
+    margin-right: 11.8rem;
+}
+
+.tbodyp3 {
+    margin-right: .8rem;
 }

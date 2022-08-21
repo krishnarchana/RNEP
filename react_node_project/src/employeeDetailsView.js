@@ -5,6 +5,8 @@ import NavBar from './navBar';
 import './App.css';
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Calendar from './calendar';
+import CalendarComp from './CalendarComp';
 
 function EmployeeDetailsView() {
 
@@ -91,7 +93,7 @@ function EmployeeDetailsView() {
                 <div style={{ marginTop: '3rem' }}>
                     <NavBar showManage={showView} closeWindow={close} />
                 </div>
-                <div style={{marginTop:'2rem'} }>
+                <div style={{marginTop:'2.5rem'} }>
                     <table style={{ width: '100%' }}>
                         <thead>
                             <tr>
@@ -131,7 +133,39 @@ function EmployeeDetailsView() {
                                                 </div>
                                             </button>
                                             <div className="panelE">
-                                                <p>{item.status}</p>
+                                                <table className="tableClass">
+                                                    <thead className="theadClass">
+                                                        <tr>
+                                                            <th><p className="theadp1">Employment Type</p></th>
+                                                            <th><p className="theadp2">Manager Name</p></th>
+                                                            <th><p className="theadp3">Manager Email</p></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody className="tbodyClass">
+                                                        <tr>
+                                                            <td><p className="tbodyp1">{item.employmentType}</p></td>
+                                                            <td><p className="tbodyp2">{item.managerName}</p></td>
+                                                            <td><p className="tbodyp3">{item.managerEmail}</p></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <br />
+                                                <select name="calendar" className="calendarClass">
+                                                    <option value="january">January 2022</option>
+                                                    <option value="february">February 2022</option>
+                                                    <option value="march">March 2022</option>
+                                                    <option value="april">April 2022</option>
+                                                    <option value="may">May 2022</option>
+                                                    <option value="june">June 2022</option>
+                                                    <option value="july">July 2022</option>
+                                                    <option value="august">August 2022</option>
+                                                    <option value="september">September 2022</option>
+                                                    <option value="october">October 2022</option>
+                                                    <option value="november">November 2022</option>
+                                                    <option value="december">December 2022</option>
+                                                </select>
+                                                <br />
+                                                <CalendarComp />
                                             </div>
                                         </td>
                                     </tr>
