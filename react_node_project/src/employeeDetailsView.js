@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Calendar from './calendar';
 import CalendarComp from './CalendarComp';
+//import {format} from "date-fns";
 
 function EmployeeDetailsView() {
 
@@ -14,6 +15,25 @@ function EmployeeDetailsView() {
     const [showView, setShowView] = useState(false);
     const [employeeData, setEmployeeData] = useState(EmployeeData);
     const [updateData, setUpdateData] = useState([]);
+    //const [changedDate, setChangedDate] = useState('');
+    //const [selectedDDMonth, setSelectedDDMonth] = useState('');
+    const [initIndex, setInitIndex] = useState(0);
+
+    //const [changedAccIndex, setChangedAccIndex] = useState(0);
+
+    const monthsArray = [{ month: 'january', index: 0 },
+    { month: 'february', index: 1 },
+    { month: 'march', index: 2 },
+    { month: 'april', index: 3 },
+    { month: 'may', index: 4 },
+    { month: 'june', index: 5 },
+    { month: 'july', index: 6 },
+    { month: 'august', index: 7 },
+    { month: 'september', index: 8 },
+    { month: 'october', index: 9 },
+    { month: 'november', index: 10 },
+    { month: 'december', index: 11 }
+    ];
 
     useEffect(() => {
         if (updateData.length > 0) {
@@ -22,15 +42,34 @@ function EmployeeDetailsView() {
     }, [updateData]);
 
     const accordianClick = (index) => {
-        var acc = document.getElementsByClassName("accordionE");
-        var accSelected = acc[index];
-        //accSelected.classList.toggle("active");
-        var panel = accSelected.nextElementSibling;
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
+        let allPanels = document.getElementsByClassName("accordionE");
+        let selected = allPanels[index];
+        let pnl = selected.nextElementSibling;
+        if (pnl.style.maxHeight) {
+            pnl.style.maxHeight = null;
         } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
+            pnl.style.maxHeight = pnl.scrollHeight + "px";
         }
+
+        setInitIndex(index);
+
+        //setChangedAccIndex(index);
+        // document.getElementById('calendarOptionId').value = "august";
+        // let po = pnl.childNodes[2];
+        //po.option[initIndex].selected = 'selected';
+        //document.getElementById("calendarOptionId").getElementsByTagName('option')[initIndex].selected = 'selected';
+
+        /*const collection = document.getElementsByClassName("accordionE");
+        for (let i = 0; i < collection.length; i++) {
+            let accSelected = collection[i];
+
+            let panel = accSelected.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        }*/
     };
 
     const logoutHandler = () => {
@@ -44,11 +83,11 @@ function EmployeeDetailsView() {
             setShowView(false);
         }
     }
-    const selectCB = (event) => {  
+    const selectCB = (event) => {
         let temp = employeeData;
         temp.forEach(item => {
             item.isChecked = event.target.checked;
-       })
+        })
         setUpdateData([...temp]);
     }
     const rowSelected = (event) => {
@@ -58,14 +97,51 @@ function EmployeeDetailsView() {
             if (event.target.id == ("cb" + index)) {
                 item.isChecked = event.target.checked;
             }
-            
+
             if (event.target.id == ("cb" + index)) {
                 let input = document.getElementById("cbAll");
                 input.checked = false;
-            }           
+            }
         })
         setUpdateData([...temp]);
     }
+
+    /*useEffect(() => {
+        const date = format(new Date(), 'LLLL');
+        let monthIndex = 0;
+        monthsArray.map((item, index) => {
+            if (item.month.toLowerCase() === date.toLowerCase()) {
+                monthIndex = index + 1;
+            }
+        })
+        const format = `2022/${monthIndex}/01`;
+        var currentdate = new Date(format);
+        setChangedDate(currentdate);
+    }, []);*/
+
+    /*const selectedMonth = (month) => {        
+        let monthIndex = 0;
+        monthsArray.map((item, index) => {
+            if (item.month.toLowerCase() === month.toLowerCase()) {
+                monthIndex = index;
+            }
+        })
+        setInitIndex(monthIndex);
+        document.getElementById("calendarOptionId").getElementsByTagName('option')[monthIndex].selected = 'selected';
+    }*/
+
+    /*const monthDropdownChange = (event) => {
+        let monthIndex = 0;
+        setSelectedDDMonth(event.target.value.toLowerCase());
+        monthsArray.map((item, index) => {
+            if (item.month.toLowerCase() === event.target.value.toLowerCase()) {
+                monthIndex = index+1;
+            }
+        })
+        const format = `2022/${monthIndex}/01`;
+        const currentdate = new Date(format);
+        setChangedDate(currentdate);
+    }*/
 
     return (
         <div className="App">
@@ -93,20 +169,20 @@ function EmployeeDetailsView() {
                 <div style={{ marginTop: '3rem' }}>
                     <NavBar showManage={showView} closeWindow={close} />
                 </div>
-                <div style={{marginTop:'2.5rem'} }>
+                <div style={{ marginTop: '2.5rem' }}>
                     <table style={{ width: '100%' }}>
                         <thead>
                             <tr>
-                                <td style={{fontWeight:'bold', width:'90%'} }>
+                                <td style={{ fontWeight: 'bold', width: '90%' }}>
                                     <input id="cbAll" type="checkbox" style={{ float: 'left', marginLeft: '2.8rem', textAlign: 'left' }} onChange={selectCB} />
-                                <span style={{ float: 'left', marginRight: '8rem', width: '3rem' }}>Name</span>
-                                <span style={{ float: 'left', marginRight: '38px', width: '18rem', textAlign: 'left' }}>Email</span>
-                                <span style={{ float: 'left', marginRight: '25px', width: '5rem', textAlign: 'left' }}>LANID</span>
-                                <span style={{ float: 'left', marginRight: '25px', width: '10rem', textAlign: 'left' }}>Group Name</span>
-                                <span style={{ float: 'left', marginRight: '25px', width: '8rem', textAlign: 'left' }}>Hours Available</span>
-                                <span style={{ float: 'left', marginRight: '25px', width: '6rem', textAlign: 'left' }}>Total Hours</span>
-                                <span style={{ float: 'left', marginRight: '25px', width: '7rem', textAlign: 'left' }}>Status</span>
-                                <span style={{ float: 'left', width: '4rem' }}></span>
+                                    <span style={{ float: 'left', marginRight: '8rem', width: '3rem' }}>Name</span>
+                                    <span style={{ float: 'left', marginRight: '38px', width: '18rem', textAlign: 'left' }}>Email</span>
+                                    <span style={{ float: 'left', marginRight: '25px', width: '5rem', textAlign: 'left' }}>LANID</span>
+                                    <span style={{ float: 'left', marginRight: '25px', width: '10rem', textAlign: 'left' }}>Group Name</span>
+                                    <span style={{ float: 'left', marginRight: '25px', width: '8rem', textAlign: 'left' }}>Hours Available</span>
+                                    <span style={{ float: 'left', marginRight: '25px', width: '6rem', textAlign: 'left' }}>Total Hours</span>
+                                    <span style={{ float: 'left', marginRight: '25px', width: '7rem', textAlign: 'left' }}>Status</span>
+                                    <span style={{ float: 'left', width: '4rem' }}></span>
                                 </td>
                             </tr>
                         </thead>
@@ -150,7 +226,7 @@ function EmployeeDetailsView() {
                                                     </tbody>
                                                 </table>
                                                 <br />
-                                                <select name="calendar" className="calendarClass">
+                                                {/*<select id="calendarOptionId" name="calendar" className="calendarClass" onChange={(e) => monthDropdownChange(e)}>
                                                     <option value="january">January 2022</option>
                                                     <option value="february">February 2022</option>
                                                     <option value="march">March 2022</option>
@@ -163,9 +239,9 @@ function EmployeeDetailsView() {
                                                     <option value="october">October 2022</option>
                                                     <option value="november">November 2022</option>
                                                     <option value="december">December 2022</option>
-                                                </select>
+                                                </select>*/}
                                                 <br />
-                                                <CalendarComp />
+                                                <CalendarComp calendarIndex={index} accIndex={initIndex} />
                                             </div>
                                         </td>
                                     </tr>
